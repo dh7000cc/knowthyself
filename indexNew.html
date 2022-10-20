@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Know Thyself</title>
+	<meta name="title" content="Job Face Analyzer">
+	<meta name="subject" content="AI anlyzes your job face">
+	<meta name="keywords" content="AI, job face">
+	<meta name="author" content="Beth Kim Corporation">
+    <link rel="stylesheet" href="style_new.css">
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-634eb52ccb20129c"></script>
+
+    </head>
+    <body>
+<div class="phone">
+	<header class="header">
+		<div class="header-logo">
+			<div>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="header-title">
+			Know Thyself
+		</div>
+		<div class="header-buttons">
+			
+			<button class="avatar">
+<img src="https://assets.codepen.io/285131/pexels-photo-838875.jpeg" />
+			</button>
+		</div>
+	</header>
+	<nav class="navigation">
+		<a href="#" class="navigation-item active">Overview</a>
+		<a href="#" class="navigation-item">Songs</a>
+		<a href="#" class="navigation-item">Albums</a>
+		<a href="#" class="navigation-item">Artists</a>
+	</nav>
+	<section class="title">
+		<h1>How can I make a fortune?</h1>
+		<p>For optimal results, please give us your most natural face while envisioning yourself becoming a billionaire. </p>
+	</section>
+	<section class="search">
+	<div class="preview justify-content-center"></div>
+	</section>
+	<div class="menu-inner justify-content-center">
+	<button id="upload_button"><h2>
+		Upload Image</h2></button>
+            </div>
+
+            <input type="file" id="filePicker" />
+            <div class="fileName"></div>
+	
+	<section class="playlists">
+
+		<article class="card">
+			<div class="card-inner">
+				<span class="card-pin"></span>
+				<div class="card-image">
+					<img src="https://assets.codepen.io/285131/illustration-hand-with-cigarette-icon.jpg" />
+				</div>
+				<div class="card-content">
+					<div class="card-meta">
+						<span class="card-meta-number">20 songs</span>
+						<button class="card-meta-button">
+							<i class="ai-circle-triangle-right-fill"></i>
+						</button>
+					</div>
+					<h2 class="card-title">Alan Walker</h2>
+				</div>
+			</div>
+		</article>
+
+		<article class="card">
+			<div class="card-inner">
+				<span class="card-pin"></span>
+				<div class="card-image">
+					<img src="https://assets.codepen.io/285131/hand-drawn-monster-milkshake.jpg" />
+				</div>
+				<div class="card-content">
+					<div class="card-meta">
+						<span class="card-meta-number">20 songs</span>
+						<button class="card-meta-button">
+							<i class="ai-circle-triangle-right-fill"></i>
+						</button>
+					</div>
+					<h2 class="card-title">Tim Bergling</h2>
+				</div>
+			</div>
+		</article>
+	</section>
+	<section class="currently-playing">
+
+		<article class="card horizontal">
+			<div class="card-inner">
+				<span class="card-pin simple"></span>
+				<div class="card-image">
+					<img src="https://assets.codepen.io/285131/pink-pastel-juicy-banana.jpg" />
+				</div>
+				<div class="card-content">
+					<div class="card-meta">
+						<span class="card-meta-artist">Marshmello</span>
+						<button class="card-meta-button" style="opacity: 0;">
+							<i class="ai-circle-triangle-right-fill"></i>
+						</button>
+					</div>
+					<h2 class="card-title">Hate the Other Side
+						<span class="card-time">3:40</span>
+					</h2>
+				</div>
+				<span class="card-pin simple"></span>
+			</div>
+		</article>
+	</section>
+	<footer class="menu">
+		<div class="menu-inner">
+			<a href="#" class="menu-item active">
+				<i class="ai-home"></i>
+			</a>
+			<a href="#" class="menu-item">
+				<i class="ai-heart"></i>
+			</a>
+			<a href="#" class="menu-item">
+				<i class="ai-fire"></i>
+			</a>
+			<a href="#" class="menu-item">
+				<i class="ai-gear"></i>
+			</a>
+		</div>
+	</footer>
+</div>
+		
+		<script>
+            var triggerUpload = document.getElementById('upload_button'),
+                upInput = document.getElementById('filePicker'),
+                preview = document.querySelector('.preview');
+
+            //force triggering the file upload here...
+            triggerUpload.onclick = function () {
+                upInput.click();
+            };
+
+            upInput.onchange = function (e) {
+                var uploaded = this.value,
+                    ext = uploaded.substring(uploaded.lastIndexOf('.') + 1),
+                    ext = ext.toLowerCase(),
+                    fileName = uploaded.substring(uploaded.lastIndexOf('\\') + 1),
+                    accepted = ['jpg', 'png', 'gif', 'jpeg'];
+
+                /*
+    ::Add in blank img tag and spinner
+    ::Use FileReader to read the img data
+    ::Set the image source to the FileReader data
+  */
+                function showPreview() {
+                    preview.innerHTML = "<div class='loadingLogo'></div>";
+                    preview.innerHTML += '<img id="img-preview" />';
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        var img = document.getElementById('img-preview');
+                        img.src = reader.result;
+                        $('#loading').show();
+                        $('#resumeProficiencies').show();
+                    };
+                    reader.readAsDataURL(e.target.files[0]);
+                    preview.removeChild(document.querySelector('.loadingLogo'));
+                    document.querySelector('.fileName').innerHTML = fileName + '<b> Uploaded!</b>';
+                    init().then(function () {
+						predict();
+                        $('#loading').hide();
+                    });
+                }
+
+                //only do if supported image file
+                if (new RegExp(accepted.join('|')).test(ext)) {
+                    showPreview();
+                } else {
+                    preview.innerHTML = '';
+                    document.querySelector('.fileName').innerHTML =
+                        'Upload an image file, not a <b>.' + ext + '</b> file!';
+                }
+            };
+        </script>
+	</body>
+	<!--
+Copyright (c) 2022 by Håvard Brynjulfsen (https://codepen.io/havardob/pen/JjJXqZm)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+--> 
+</html>

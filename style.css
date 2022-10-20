@@ -1,3 +1,9 @@
+#loading {
+  display: none;
+}
+#resumeProficiencies{
+	display:none;
+}
 
  .btn {
 	 text-align: center;
@@ -61,8 +67,10 @@
 	}
 }
  body {
-	 font-family: sans-serif;
-	 background: #ffffff;
+	   font-family: 'Jua', sans-serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #35465d;
 }
 .nav-distance {
 	padding: 2.1% 7.7%;
@@ -78,7 +86,9 @@
 .navbar-light .navbar-toggler {
     border-color: #ffffff;
 }
-
+.spinner-border{
+	text-align: center;
+}
 
 .title {
   font-family: NanumSquareR;
@@ -103,4 +113,54 @@
     .navbar-brand {
         font-size: 2rem;
     }
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+.reinhart-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(117, 204, 84, 1);
+}
+.Gina-Reinhart-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(117, 204, 84, 0.2);
+}
+.bilio-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.bilio-message {
+    font-size: 2rem;
+}
+
+
+.bilio-explain {
+    font-size: 1.5rem;
+}
+
+.reinhart-title {
+    color: #3ba363;
+}
+.reinhart-desc1 {
+    color: #3ba363;
+    font-size: 1.2rem;
+}
+.reinhart-desc2 {
+    color: #3ba363;
+    font-size: 1.2rem;
 }

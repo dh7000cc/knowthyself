@@ -137,73 +137,73 @@
                 // predict can take in an image, video or canvas html element
                 const prediction = await model.predict(image, false);
 				prediction.sort((a,b) => parseFloat(b.probability) - parseFloat(a.probability));
-				var resultMessege;
+				var resultTitle;
 				console.log(prediction[0].className);
 				switch (prediction[0].className){
 					case "0. Accountant":
-						resultMessege = "0. Accountant"
+						resultTitle = "0. Accountant"
 					break;
 					case "1. Actor*":
-						resultMessege = "1. Actor"
+						resultTitle = "1. Actor"
 					break;
 						case "2. Architect*":
-						resultMessege = "2. Architect"
+						resultTitle = "2. Architect"
 					break;
 						case "3. Artist":
-						resultMessege = "3. Artist"
+						resultTitle = "3. Artist"
 					break;
 						case "4. Athlete":
-						resultMessege = "4. Athlete"
+						resultTitle = "4. Athlete"
 					break;
 						case "5. Chef":
-						resultMessege = "5. Chef"
+						resultTitle = "5. Chef"
 					break;
 						case "6. Programmer*":
-						resultMessege = "6. Programmer"
+						resultTitle = "6. Programmer"
 					break;
 						case "7. Designer":
-						resultMessege = "7. Designer"
+						resultTitle = "7. Designer"
 					break;
 						case "8. Doctor*":
-						resultMessege = "8. Doctor*"
+						resultTitle = "8. Doctor*"
 					break;
 						case "9. Engineer":
-						resultMessege = "9. Engineer"
+						resultTitle = "9. Engineer"
 					break;
 						case "10. Entrepreneur*":
-						resultMessege = "10. Entrepreneur"
+						resultTitle = "10. Entrepreneur"
 					break;
 						case "11. Firefighter":
-						resultMessege = "11. Firefighter"
+						resultTitle = "11. Firefighter"
 					break;
 						case "12. Lawyer":
-						resultMessege = "12. Lawyer"
+						resultTitle = "12. Lawyer"
 					break;
 						case "13. Musician":
-						resultMessege = "13. Musician"
+						resultTitle = "13. Musician"
 					break;
 						case "14. Pilot":
-						resultMessege = "14. Pilot"
+						resultTitle = "14. Pilot"
 					break;
 						case "15. Police Officer*":
-						resultMessege = "15. Police Officer"
+						resultTitle = "15. Police Officer"
 					break;
 						case "16. Politician*":
-						resultMessege = "16. Politician"
+						resultTitle = "16. Politician"
 					break;
 						case "17. Scientist":
-						resultMessege = "17. Scientist"
+						resultTitle = "17. Scientist"
 					break;
 						case "18. Teacher":
-						resultMessege = "18. Teacher"
+						resultTitle = "18. Teacher"
 					break;
 						case "19. Writer":
-						resultMessege = "19. Writer"
+						resultTitle = "19. Writer"
 					break;
-					default: resultMessege = "unknown"
+					default: resultTitle = "unknown"
 										
 								}
-				$('.result-message').html(resultMessege);
+				$('.result-message').html(resultTitle);
                 for (let i = 0; i < maxPredictions; i++) {
                     const classPrediction =
                         prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
