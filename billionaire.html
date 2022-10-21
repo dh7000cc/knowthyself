@@ -14,11 +14,11 @@
 		/>
 
 		<title>Know Thyself</title>
-		<meta name="title" content="AI Face Analyzer" />
-		<meta name="subject" content="AI anlyzes your face" />
-		<meta name="keywords" content="AI, face" />
+		<meta name="title" content="Money Face Analyzer" />
+		<meta name="subject" content="AI anlyzes how can you make fortune" />
+		<meta name="keywords" content="AI Face Analyzer" />
 		<meta name="author" content="Beth Kim Corporation" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="style_new.css" />
 		<!-- Go to www.addthis.com/dashboard to customize your tools -->
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	</head>
@@ -43,44 +43,108 @@
 				</div>
 			</header>
 			<nav class="navigation">
-				<a href="#" class="navigation-item active">Overview</a>
-				<a href="#" class="navigation-item">Tests</a>
+				<a href="#" class="navigation-item">Overview</a>
+				<a href="#" class="navigation-item active">Tests</a>
 				<a href="#" class="navigation-item">Bujeoks</a>
 			</nav>
 			<section class="title">
-				<h1>AI Face Analyzer</h1>
+				<h1>How can I make a fortune?</h1>
 				<p style="text-align: center;">
 					For optimal results, please give us your most natural face while envisioning
-					yourself.
+					yourself becoming a billionaire.
 				</p>
 			</section>
-			
-<br>
-			<section class="playlists1">
-				
+			<section class="search">
+				<div class="preview justify-content-center"></div>
+			</section>
+			<div class="uploadmenu">
+				<div class="menu-inner">
+					<button id="upload_button">
+						<h3>
+							Upload Image
+						</h3>
+					</button>
+					<br />
+				</div>
+			</div>
+			<input type="file" id="filePicker" />
+			<div class="fileName"></div>
+			<section class="loading" style="display:none">
+				<div class="music">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+				<div id="label-container"></div>
+				<div id="result-message" style="display:none"></div>
+				<h2 style="text-align=center">
+					AI analyze your face...
+				</h2>
+			</section>
+			<section class="currently-playing" style="display:none">
+				<article class="card horizontal">
+					<div class="card-inner">
+						<span class="card-pin simple"></span>
+						<div class="card-image">
+							<img src="img/facepreview.PNG" />
+						</div>
+						<div class="card-content">
+							<div class="card-meta">
+								<button class="card-meta-button" style="opacity: 0;">
+									<i class="ai-circle-triangle-right-fill"></i>
+								</button>
+							</div>
+							<h2 class="card-title">
+								Amancio Ortega
+							</h2>
+						</div>
+						<span class="card-pin simple"></span>
+					</div>
+				</article>
+			</section>
+
+			<section class="description">
+				<br />
+
+				<p class="bilio-desc1"></p>
+				<p class="bilio-desc2"></p>
+				<p class="bilio-desc3"></p>
+				<p class="bilio-desc4"></p>
+				<p class="bilio-desc5"></p>
+			</section>
+			<section class="copyright">
+				<p class="copyright1"></p>
+				<p class="copyright2"></p>
+			</section>
+
+			<section class="playlists">
 				<article class="card">
 					<div class="card-inner">
 						<span class="card-pin"></span>
 						<div class="card-image">
-							<a href = "billionaire.html"><img
+							<img
 								src="https://assets.codepen.io/285131/illustration-hand-with-cigarette-icon.jpg"
-															  /></a>
+							/>
 						</div>
 						<div class="card-content">
 							<div class="card-meta">
-								<a href = "billionaire.html"><span class="card-meta-number">Bilionarie Face</span></a>
+								<span class="card-meta-number">20 songs</span>
 								<button class="card-meta-button">
 									<i class="ai-circle-triangle-right-fill"></i>
 								</button>
 							</div>
-							<a href = "billionaire.html"><h2 class="card-title">How Much I Can Make?</h2></a>
+							<h2 class="card-title">Alan Walker</h2>
 						</div>
 					</div>
 				</article>
-					<
-			</section>
-		<br>
-			<section class="playlists1">
+
 				<article class="card">
 					<div class="card-inner">
 						<span class="card-pin"></span>
@@ -91,57 +155,12 @@
 						</div>
 						<div class="card-content">
 							<div class="card-meta">
-								<span class="card-meta-number">Job Face</span>
+								<span class="card-meta-number">20 songs</span>
 								<button class="card-meta-button">
 									<i class="ai-circle-triangle-right-fill"></i>
 								</button>
 							</div>
-							<h2 class="card-title">Which Job Suits Me?</h2>
-						</div>
-					</div>
-				</article>
-				<br>
-			</section>
-			<br>
-			<section class="playlists1">
-				<article class="card">
-					<div class="card-inner">
-						<span class="card-pin"></span>
-						<div class="card-image">
-							<img
-								src="https://assets.codepen.io/285131/illustration-hand-with-cigarette-icon.jpg"
-							/>
-						</div>
-						<div class="card-content">
-							<div class="card-meta">
-								<span class="card-meta-number">Model Face</span>
-								<button class="card-meta-button">
-									<i class="ai-circle-triangle-right-fill"></i>
-								</button>
-							</div>
-							<h2 class="card-title">Am I Attractive Person?</h2>
-						</div>
-					</div>
-				</article>
-			</section>
-			<br>
-			<section class="playlists1">
-				<article class="card">
-					<div class="card-inner">
-						<span class="card-pin"></span>
-						<div class="card-image">
-							<img
-								src="https://assets.codepen.io/285131/hand-drawn-monster-milkshake.jpg"
-							/>
-						</div>
-						<div class="card-content">
-							<div class="card-meta">
-								<span class="card-meta-number">Today Fortune Teller</span>
-								<button class="card-meta-button">
-									<i class="ai-circle-triangle-right-fill"></i>
-								</button>
-							</div>
-							<h2 class="card-title">Today's Fortune</h2>
+							<h2 class="card-title">Tim Bergling</h2>
 						</div>
 					</div>
 				</article>
@@ -150,7 +169,6 @@
                 
             
 			</section>
-			
 <div class="addthis_inline_share_toolbox"></div>
 			<footer>
 				<p>

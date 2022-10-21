@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*,
+
 *:after,
 *:before {
 	box-sizing: border-box;
@@ -37,14 +37,25 @@ img {
 	display: block;
 	max-width: 100%;
 }
+#loading {
+  display: none;
+}
+#result-message{
+	display:none;
+}
+#currently-playing{
+	display:none;
+}
 
 input,
 button {
 	font: inherit;
+	background-color:transparent;
+	border:none;
 }
 
 .phone {
-	width: 460px;
+	width: 70%;
 	border-radius: 25px;
 	overflow: hidden;
 	padding: 2rem;
@@ -54,6 +65,7 @@ button {
 	z-index: 1;
 	margin-left: auto;
 	margin-right: auto;
+	text-align:center;
 }
 
 .header {
@@ -158,11 +170,11 @@ button {
 .title {
 	 margin-top: 1rem;
 }
- .title h1 {
+.title h1 {
 	 font-size: 1.5rem;
 	 font-weight: 700;
 }
- .title p {
+.title p {
 	 font-size: 1rem;
 	 color: var(--c-gray-500);
 	 margin-top: 0.375em;
@@ -232,7 +244,8 @@ button {
 	padding: 1rem 0.5rem;
 }
 .card {
-	 width: 200px;
+	 width: 50%;
+	height: 25%;
 	 transform: rotate(var(--rotation));
 	 transition: 0.15s ease-out;
 }
@@ -268,7 +281,7 @@ button {
 	 transform: rotate(3deg);
 }
  .card.horizontal .card-inner {
-	 flex-direction: row;
+	 flex-direction: center;
 	 align-items: center;
 	 padding: 1rem;
 }
@@ -276,25 +289,27 @@ button {
 	 background-color: var(--c-green-500);
 }
  .card.horizontal .card-image {
-	 width: 60px;
-	 height: 60px;
+	 width: 75%;
+	 height: 75%;
 	 flex-shrink: 0;
 }
  .card.horizontal .card-content {
 	 width: 100%;
 	 margin-top: 0;
 	 margin-left: 0.5rem;
+	 text-align:center;
 }
  .card.horizontal .card-meta-artist {
 	 font-weight: 700;
 }
  .card.horizontal .card-title {
 	 font-weight: 500;
-	 color: var(--c-gray-500);
-	 font-size: 1.125em;
+	 color: black;
+	 font-size: 2em;
 	 margin-top: 0.125em;
-	 display: flex;
+	 display: center;
 	 align-items: center;
+	 text-align:center;
 	 flex-wrap: wrap;
 	 justify-content: space-between;
 }
@@ -317,8 +332,8 @@ button {
 	padding: 0.5rem;
 	background-color: #fff;
 	position: relative;
+	height: 300px;
 	&:after {
-		content: "";
 		display: block;
 		position: absolute;
 		z-index: -1;
@@ -331,6 +346,7 @@ button {
 		background-color: var(--c-yellow-300);
 	}
 }
+
 .card-pin {
 	 width: 12px;
 	 height: 12px;
@@ -446,23 +462,27 @@ button {
 	font-weight: 600;
 	padding-bottom: 0.5rem;
 }
-
+.uploadmenu{
+	display:flex;
+	justify-content:center;
+}
 .menu-inner {
 	margin-top: 2rem;
-	display: flex;
-	justify-content: center;
 	border-radius: 15px;
 	border: 2px solid var(--c-gray-900);
-	justify-content: space-between;
+	display:center;
+	justify-content: center;
 	padding: .75rem;
 	background-color: var(--c-blue-500);
 	position: relative;
+	text-align:center;
+	width:50%;
 	&:after {
 		content: "";
 		display: block;
 		position: absolute;
 		z-index: -1;
-		width: 95%;
+		width: 50%;
 		height: 100%;
 		bottom: -9px;
 		left: calc(50% - 47.5%);
@@ -490,12 +510,14 @@ button {
 	 background-color: var(--c-yellow-500);
 	 color: var(--c-gray-900);
 }
- 
+
 .preview {
 	 position: relative;
 	 width: 250px;
 	 height: 250px;
-	 background: #f2f2f2;
+	 
+     background-image:url("img/facepreview.PNG") ;
+	background-size:contain;
 	 border-radius: 100%;
 	 margin: 0 auto 25px auto;
 	 overflow: hidden;
@@ -543,4 +565,102 @@ button {
  .fileName {
 	 padding-top: 10px;
 	 font-weight: 300;
+}
+.loading{
+	align-items: center;
+	text-align: center;
+}
+.music {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 300px;
+  height: 200px;
+
+}
+
+.music .bar {
+  width: 12px;
+  height: 2px;
+  border-radius: 10px;
+  background-color: white;
+  animation: up_down 1.5s ease-in-out infinite;
+}
+
+@keyframes up_down {
+  0%,
+  100% {
+    height: 2px;
+  }
+  50% {
+    height: 80px;
+  }
+}
+
+.music .bar:nth-child(1) {
+  background-color: purple;
+  animation-delay: 1s;
+}
+
+.music .bar:nth-child(2) {
+  background-color: crimson;
+  animation-delay: 0.8s;
+}
+
+.music .bar:nth-child(3) {
+  background-color: deeppink;
+  animation-delay: 0.6s;
+}
+
+.music .bar:nth-child(4) {
+  background-color: orange;
+  animation-delay: 0.4s;
+}
+
+.music .bar:nth-child(5) {
+  background-color: gold;
+  animation-delay: 0.2s;
+}
+
+.music .bar:nth-child(6) {
+  background-color: gold;
+  animation-delay: 0.2s;
+}
+
+.music .bar:nth-child(7) {
+  background-color: orange;
+  animation-delay: 0.4s;
+}
+
+.music .bar:nth-child(8) {
+  background-color: deeppink;
+  animation-delay: 0.6s;
+}
+
+.music .bar:nth-child(9) {
+  background-color: crimson;
+  animation-delay: 0.8s;
+}
+
+.music .bar:nth-child(10) {
+  background-color: purple;
+  animation-delay: 1s;
+}
+p {
+	text-indent: 2em;
+	text-align:justify;
+	font-size:1.5em;
+}
+.copyright1 {
+color:grey;
+font-size:small;
+}
+.copyright2 {
+color:grey;
+font-size:small;
+}
+.playlists1 {
+	display:flex;
+	justify-content: center;
 }
