@@ -246,6 +246,8 @@ data-ad-height = "100"></ins>
 				var resultDesc2 = "Please don't despair if our results do not match up with the career of your choice, as human efforts and strong will can change anything!";
 				var tag;
 				console.log(prediction[0].className);
+				console.log(prediction[0].probability);
+				
 				switch (prediction[0].className) {
 					case '0. Accountant':
 						tag = 'accountant';
