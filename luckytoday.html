@@ -25,7 +25,7 @@
 	<body>
 		<div class="phone">
 			<header class="header">
-				<div class="header-logo">
+				<div class="header-logo" style="display:none">
 					<div>
 						<span></span>
 						<span></span>
@@ -33,42 +33,33 @@
 						<span></span>
 					</div>
 				</div>
-				<div class="header-title">
+				<div class="header-title" style="font-size:2em">
 					Know Thyself
 				</div>
+				<div class="header-title">
+				
+						AI-Based Face-Reading
+														
+				</div>
 				<div class="header-buttons">
-					<button class="avatar">
-						<img src="https://assets.codepen.io/285131/pexels-photo-838875.jpeg" />
-					</button>
+					
 				</div>
 			</header>
 			<nav class="navigation">
-				<a href="about.html" class="navigation-item">About</a>
-				<a href="tests.html" class="navigation-item active">Tests</a>
+				<a href="about.html" class="navigation-item">Overview</a>
+				<a href="tests.html" class="navigation-item active">Face-Reading</a>
 				<a
-					href="https://opensea.io/collection/bujeok-the-korean-talisman"
+					href="bujeoks.html"
 					class="navigation-item"
-					>Bujeoks</a
+					>Bujeok</a
 				>
 				<a href="contact.html" class="navigation-item">Contact</a>
 			</nav>
 			<section class="title">
 				<h1>How lucky am I today?</h1>
-				<p style="text-align: center;">
-					Please use a photo taken today, as luck fluctuates over time. If you use an old
-					photo, you will get inaccurate results.
-				</p>
-				<p style="text-align: center;">
-					Take a photo or upload a photo here. We do not collect, save, disclose or sell
-					any of your photos.
-				</p>
-				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2648516954898702"
-     crossorigin="anonymous"></script>
-				<ins class="kakao_ad_area" style="display:none;"
-data-ad-unit = "DAN-FU8ujk5udaohCAy3"
-data-ad-width = "320"
-data-ad-height = "100"></ins>
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+				
+				
+			
 			</section>
 			<section class="search">
 				<div
@@ -84,7 +75,12 @@ data-ad-height = "100"></ins>
 					<br />
 				</div>
 			</div>
-
+			<br>
+<p style="text-align: justify;">
+					Please use a photo taken today, as luck fluctuates over time. If you use an old
+					photo, you will get inaccurate results. We do not collect, save, disclose or sell
+					any of your photos.
+				</p>
 			<input type="file" id="filePicker" />
 			<div class="fileName"></div>
 			<section class="loading" style="display: none;">
@@ -103,7 +99,7 @@ data-ad-height = "100"></ins>
 				<div id="label-container"></div>
 				<div id="result-message" style="display: none;"></div>
 				<h2 style="text-align=center">
-					AI analyze your face...
+					Analyzing... May take up to 5 seconds.
 				</h2>
 			</section>
 			<section class="currently-playing" style="display: none;">
