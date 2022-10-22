@@ -71,9 +71,9 @@ button {
 .header {
 	display: grid;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	margin-bottom: 1.5rem;
-	grid-template-columns: 1fr 2fr 1fr;
+	
 }
 .header-logo {
 	 display: flex;
@@ -90,6 +90,7 @@ button {
 	 flex-wrap: wrap;
 	 width: 24px;
 	 height: 24px;
+	
 }
  .header-logo span {
 	 display: block;
@@ -98,13 +99,17 @@ button {
 	 border: 2px solid var(--c-gray-900);
 	 background-color: var(--c-yellow-500);
 	 border-radius: 50%;
+	  justify-content:center;
 }
  
 .header-title {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	margin-left: auto;
 	margin-right: auto;
+	display:flex;
+	justify-content:center;
+	text-align:center;
 }
 
 .header-buttons {
@@ -399,7 +404,7 @@ button {
  .card-image {
 	 border-radius: 15px;
 	 overflow: hidden;
-	 aspect-ratio: 1.3333333333;
+	 aspect-ratio: 2.5;
 	 position: relative;
 }
  .card-image img {

@@ -62,11 +62,18 @@
 					Take a photo or upload a photo here. We do not collect, save, disclose or sell
 					any of your photos.
 				</p>
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2648516954898702"
+     crossorigin="anonymous"></script>
+				<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit = "DAN-FU8ujk5udaohCAy3"
+data-ad-width = "320"
+data-ad-height = "100"></ins>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 			</section>
 			<section class="search">
 				<div
 					class="preview justify-content-center"
-					style="background-image: url('img/jobface/frontpage.jpg');"
+					style="background-image: url('img/luckytoday/frontpage.jpg');"
 				></div>
 			</section>
 			<div class="uploadmenu">
@@ -104,7 +111,7 @@
 					<div class="card-inner">
 						<span class="card-pin simple"></span>
 						<div class="card-image">
-							<img src="img/facepreview.PNG" />
+						<img id = "resultImg" src="img/facepreview.PNG" style="max-width:50%; height:auto"/>
 						</div>
 						<div class="card-content">
 							<div class="card-meta">
@@ -180,7 +187,7 @@
 			<footer class="talismanads" style="display: none;">
 				<p style="text-align: justify; text-indent: 2em; padding: 0.2em;">
 					If you would like to enhance your luck, please check out our bujeoks
-					<a href="https://opensea.io/collection/bujeok-the-korean-talisman">HERE</a>.
+					<a href="bujeoks.html">HERE</a>.
 					Bujeok, which is the term for Korean talisman with over 4000 years of history,
 					is said to bring good luck and positive energy and dispel misfortune and evil
 					spirits. Different bujeoks serve different purposes. Pick a bujeok that best
@@ -272,7 +279,8 @@
 						break;
 
 				}
-
+var img = document.getElementById('resultImg');
+				img.src = 'img/luckytoday/'+ resultTitle +'.jpg';
 				document.querySelector('.card-title').innerHTML = resultTitle;
 				document.querySelector('.bilio-desc1').innerHTML =
 									resultDesc1;
