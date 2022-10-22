@@ -55,7 +55,7 @@ button {
 }
 
 .phone {
-	width: 70%;
+	width: 90%;
 	border-radius: 25px;
 	overflow: hidden;
 	padding: 2rem;
@@ -652,7 +652,9 @@ button {
 p {
 	text-indent: 2em;
 	text-align:justify;
-	font-size:1.5em;
+	font-size: 1rem;
+	 color: var(--c-gray-500);
+	 margin-top: 0.375em;
 }
 .copyright1 {
 color:grey;

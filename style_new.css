@@ -55,7 +55,7 @@ button {
 }
 
 .phone {
-	width: 70%;
+	width: 90%;
 	border-radius: 25px;
 	overflow: hidden;
 	padding: 2rem;
@@ -477,25 +477,14 @@ button {
 	position: relative;
 	text-align:center;
 	width:50%;
-	&:after {
-		content: "";
-		display: block;
-		position: absolute;
-		z-index: -1;
-		width: 50%;
-		height: 100%;
-		bottom: -9px;
-		left: calc(50% - 47.5%);
-		border-radius: 20px;
-		border: 2px solid var(--c-gray-900);
-		background-color: var(--c-gray-100);
+	
 	}
-}
+
 .menu-item {
 	 display: flex;
 	 justify-content: center;
 	 align-items: center;
-	 font-size: 1.5rem;
+	 font-size: 1.2rem;
 	 color: #fff;
 	 width: 80px;
 	 border-radius: 15px;
@@ -516,8 +505,9 @@ button {
 	 width: 250px;
 	 height: 250px;
 	 
-     background-image:url("img/facepreview.PNG") ;
-	background-size:contain;
+     background-repeat : no-repeat;
+        background-size : cover;
+
 	 border-radius: 100%;
 	 margin: 0 auto 25px auto;
 	 overflow: hidden;
