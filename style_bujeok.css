@@ -197,7 +197,7 @@ button {
 	padding-bottom: 0.75rem;
 	border-bottom: 1px solid var(--c-gray-900);
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .navigation-item {
 	 font-size: 1.125rem;

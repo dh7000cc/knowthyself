@@ -201,7 +201,7 @@ button {
 	padding-bottom: 0.75rem;
 	border-bottom: 1px solid var(--c-gray-900);
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .navigation-item {
 	 font-size: 1.125rem;
@@ -248,7 +248,7 @@ button {
 	padding: 1rem 0.5rem;
 }
 .card {
-	 width: 50%;
+	 width: 80%;
 	height: 25%;
 	 transform: rotate(var(--rotation));
 	 transition: 0.15s ease-out;
@@ -281,7 +281,7 @@ button {
 	 transform: translatey(-4px);
 }
  .card.horizontal {
-	 width: 50%;
+	 width: 80%;
 	 display:inline-block;
 	 
 	 transform: rotate(3deg);

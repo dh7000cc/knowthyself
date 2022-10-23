@@ -54,7 +54,7 @@
      crossorigin="anonymous"></script>
 			</section>
 			<section class="search">
-				<div class="preview justify-content-center" style="background-image:url('img/attractiveface/frontpage.jpg')"></div>
+				<div class="preview" style="background-image:url('img/attractiveface/frontpage.jpg')"></div>
 				
 			</section>
 			<div class="uploadmenu">
@@ -252,12 +252,14 @@
   */
 				function showPreview() {
 					preview.innerHTML = "<div class='loadingLogo'></div> <style=background-image:''></style>";
+					preview.style.backgroundImage="";
 					preview.innerHTML += '<img id="img-preview" />';
 					var reader = new FileReader();
 					reader.onload = function () {
 						var img = document.getElementById('img-preview');
 						
 						img.src = reader.result;
+						
 						$('.uploadmenu').hide();
 						$('.loading').show();
 						

@@ -371,6 +371,7 @@
   */
 				function showPreview() {
 					preview.innerHTML = "<div class='loadingLogo'></div>";
+					preview.style.backgroundImage="";
 					preview.innerHTML += '<img id="img-preview" />';
 					var reader = new FileReader();
 					reader.onload = function () {
