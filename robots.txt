@@ -1,3 +1,3 @@
 User-Agent: *
 Allow: /
-Sitemap: https://knowthyself.netlify.app/sitemap.xml
+Sitemap: http://knowthyself.netlify.app/sitemap.xml
