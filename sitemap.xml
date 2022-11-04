@@ -8,8 +8,34 @@
 
 
 <url>
-  <loc>http://knowthyself.netlify.app/</loc>
-  <lastmod>2022-10-19T17:27:32+00:00</lastmod>
+  <loc>https://knowthyself.netlify.app/</loc>
+  <lastmod>2022-11-04T02:20:37+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://knowthyself.netlify.app/about.html</loc>
+  <lastmod>2022-11-04T02:20:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://knowthyself.netlify.app/tests.html</loc>
+  <lastmod>2022-11-04T02:20:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://knowthyself.netlify.app/bujeoks.html</loc>
+  <lastmod>2022-11-04T02:20:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://knowthyself.netlify.app/contact.html</loc>
+  <lastmod>2022-11-04T02:20:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://knowthyself.netlify.app/index.html</loc>
+  <lastmod>2022-11-04T02:20:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
